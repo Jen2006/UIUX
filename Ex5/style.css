@@ -1,0 +1,47 @@
+body {
+    
+    /* font-family:"Times New Roman", Times, serif; */
+
+    margin: 20px;
+
+    /* background-color: lightblue; */
+     background-image: url("images.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+     /* background-position: center; */
+   
+    border: 3px  double black ;
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: blue; */
+
+     padding: 40px;
+}
+
+h1 {
+     font-family:"Times New Roman", Times, serif;
+    font-style: italic;
+     font-weight: 400;
+
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-decoration: underline;
+    font-family: monospace;
+    color: black;
+}
+
+p {
+    word-spacing: 7px;
+    letter-spacing: 3px;
+    font-size: 18px;
+    color: black;
+}
+
+li {
+    font-size: 18px;
+    margin: 10px;
+}
