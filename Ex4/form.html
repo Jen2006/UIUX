@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>My Feedback Form</h1>
+    <Form>
+        Name:
+        <input Type="text" >
+        <br><br>
+
+        Email:
+        <input Type="email" id="email">
+        <br><br>
+
+        Password:
+        <input Type="password" minlength=8>
+        <br><br>
+
+        Please check all the emotions that apply to you:
+        <ul>
+            <li>Angry <input Type="checkbox" Name="Angry" Value="Angry" > </li>
+            <li>Sad  <input Type="checkbox" Name="Sad" Value="Sad"> </li>
+            <li>Happy<input Type="checkbox" Name="Happy" Value="Happy"> </li>
+            <li> Ambivalent<input Type="checkbox" Name="Ambivalent" Value="Ambivalent" > </li>
+
+        </ul>
+
+        How satisfied you were with our service?
+        <ul>
+            <li>Very satisfied <input  Type="radio" Name="Emotion"> </li>
+            <li>Satisfied <input  Type="radio" Name="Emotion"> </li>
+            <li> Didn't Care <input  Type="radio" Name="Emotion"> </li>
+            <li>Dissatisfied <input  Type="radio" Name="Emotion"> </li>
+            <li>Very Dissatisfied <input  Type="radio" Name="Emotion"> </li>
+        </ul>
+       
+        Further Comments:
+        <textarea  rows=2 cols=15 wrap></textarea><br><br>
+        Bio photo:
+        <input type="file" id="photo" accept=".jpg,.png">
+        <br><br>
+
+        Location visited:
+        <Select name="Select location">
+           
+            <option Value="New York">New York</option>
+            <option Value="LA">LA</option>
+            <option Value="Las Vegas">Las Vegas</option>
+            <option Value="New Jersey">New Jersey</option>
+            
+        </Select>
+        <br><br>
+        <input type="submit">
+
+    
+    </Form>
+</body>
+</html>
