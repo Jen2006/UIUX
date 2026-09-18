@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Login Form</title>
+
+    <script Language="javascript">
+        function submitinfo()
+        {
+            if (qz.log.value == "")
+             alert("Enter Login Name")
+            elseif(qz.pas.value =="")
+             alert("Enter Password Name")
+
+        }
+    </script>
+</head>
+<body>
+    <form name="qz">
+        <h2>Welcome to:</h2>
+        <h1>Niski Technology (p)l.t.d</h1>
+        <hr>
+
+        Login name
+        <input type="text" name="log" value=""><br><br>
+
+        Password
+        <input type="password" name="pass"  value=""><br><br>
+
+        <input type="button" value="Submit" onclick="submitinfo()" >
+
+        <input type="reset" name="Reset" value="Reset" >
+
+    </form>
+</body>
+</html>
