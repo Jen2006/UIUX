@@ -1,0 +1,183 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Bar</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: black;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        .menu a:hover {
+            background-color: gray;
+        }
+
+        /* Dropdown */
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: black;
+            list-style: none;
+            top: 35px;
+            left: 0;
+            width: 150px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Mobile button */
+
+        .menu-button {
+            display: none;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+
+        /* Responsive */
+
+        @media (max-width: 600px) {
+
+            .menu-button {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            .dropdown-menu {
+                position: static;
+            }
+
+            .dropdown:hover .dropdown-menu {
+                display: none;
+            }
+
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="navbar">
+
+            <div class="logo">
+                Logo
+            </div>
+
+            <div class="menu-button" onclick="showMenu()">
+                ☰
+            </div>
+
+            <ul class="menu" id="menu">
+
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+
+                <li class="dropdown" id="dropdown">
+
+                    <a href="#" onclick="showDropdown(event)">
+                        Services ▼
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Service 1</a></li>
+                        <li><a href="#">Service 2</a></li>
+                        <li><a href="#">Service 3</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <script>
+
+        function showMenu()
+        {
+            document.getElementById("menu").classList.toggle("active");
+        }
+
+
+        function showDropdown(event)
+        {
+            event.preventDefault();
+
+            document.getElementById("dropdown")
+                    .classList.toggle("active");
+        }
+
+    </script>
+
+</body>
+</html>
+```
